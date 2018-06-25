@@ -45,7 +45,7 @@ spec:
             name: test
             items:
               - key: cmcConfDef
-              path: cmcConfDef.xml
+                path: cmcConfDef.xml
  
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
