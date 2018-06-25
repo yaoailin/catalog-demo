@@ -36,6 +36,17 @@ spec:
               path: /
               port: http
           resources:
+          volumeMounts:
+            - name: cmcConfDef
+              mountPath: ~
+      volumes:
+        - name: cmcConfDef
+          configMap:
+            name: test
+            items:
+              - key: cmcConfDef
+              path: cmcConfDef.xml
+ 
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
       nodeSelector:
