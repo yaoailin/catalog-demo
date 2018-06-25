@@ -46,7 +46,6 @@ spec:
             items:
               - key: cmcConfDef
                 path: cmcConfDef.xml
- 
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
       nodeSelector:
