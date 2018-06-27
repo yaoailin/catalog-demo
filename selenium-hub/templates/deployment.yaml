@@ -23,3 +23,13 @@ spec:
               containerPort: 4444
               hostPort: 4444
               protocol: TCP
+          volumeMounts:
+            - mountPath: /home/seluser
+              name: test
+      volumes:
+        - configMap:
+          items:
+            - key: cmcConfDef
+              path: cmcConfDef.xml
+          name: test
+        name: test
