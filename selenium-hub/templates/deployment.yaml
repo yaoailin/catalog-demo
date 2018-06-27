@@ -32,4 +32,4 @@ spec:
             - key: cmcConfDef
               path: cmcConfDef.xml
           name: test
-      name: cmc
+        name: cmc
