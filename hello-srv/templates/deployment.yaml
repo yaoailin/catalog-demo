@@ -37,10 +37,10 @@ spec:
               port: http
           resources:
           volumeMounts:
-            - name: cmcConfDef
+            - name: cmc-config
               mountPath: /home
       volumes:
-        - name: cmcConfDef
+        - name: cmc-config
           configMap:
             name: test
             items:
