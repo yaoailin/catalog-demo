@@ -1,10 +1,18 @@
 apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
-  name: hello-srv
+  name: hub
+  labels:
+    run: hub
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      run: hub
   template:
+    metadata:
+      labels:
+        run: hub
     spec:
       containers:
         - name: hello-srv
