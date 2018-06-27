@@ -24,12 +24,12 @@ spec:
               hostPort: 4444
               protocol: TCP
           volumeMounts:
-            - mountPath: /home/seluser
-              name: cmc
+          - mountPath: /home/seluser
+            name: cmc
       volumes:
-        - configMap:
+      - configMap:
           items:
             - key: cmcConfDef
               path: cmcConfDef.xml
           name: test
-        name: cmc
+      name: cmc
