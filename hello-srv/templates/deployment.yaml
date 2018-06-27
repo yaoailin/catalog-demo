@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: {{ .Chart.Name }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          image: registry.docker-cn.com/selenium/hub:3.11
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
