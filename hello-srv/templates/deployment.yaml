@@ -15,8 +15,8 @@ spec:
         run: hub
     spec:
       containers:
-        - name: hello-srv
-          image: hello-world
+        - name: hub
+          image: registry.docker-cn.com/selenium/hub:3.11
           imagePullPolicy: Always
           ports:
             - name: hub
