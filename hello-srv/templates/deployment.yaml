@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: hello-srv
-          image: registry.docker-cn.com/selenium/hub:3.11
+          image: hello-world
           imagePullPolicy: Always
           ports:
             - name: hub
