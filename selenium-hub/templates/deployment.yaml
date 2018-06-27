@@ -25,11 +25,11 @@ spec:
               protocol: TCP
           volumeMounts:
             - mountPath: /home/seluser
-              name: test
+              name: cmc
       volumes:
         - configMap:
           items:
             - key: cmcConfDef
               path: cmcConfDef.xml
           name: test
-        name: test
+        name: cmc
