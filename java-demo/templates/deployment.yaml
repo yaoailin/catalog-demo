@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: java-demo
-          image: registry.docker-cn.com/yaoailin/java-demo
+          image: registry.docker-cn.com/yaoailin/java-demo:latest
           imagePullPolicy: Always
 
