@@ -4,6 +4,7 @@ metadata:
   name: hub
   labels:
     run: hub
+  namespace: selenium-hub
 spec:
   replicas: 1
   selector:
@@ -25,11 +26,11 @@ spec:
               protocol: TCP
           volumeMounts:
           - mountPath: /home/seluser
-            name: cmc
+            name: selenium-cmc
       volumes:
       - configMap:
           items:
             - key: cmcConfDef
-              path: cmcConfDef.xml
-          name: test
-        name: cmc
+              path: .cmcConfDef.xml
+          name: selenium-cmc
+        name: selenium-cmc

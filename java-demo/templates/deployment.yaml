@@ -1,0 +1,22 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: java-demo
+  labels:
+    run: java-demo
+  namespace: java-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: java-demo
+  template:
+    metadata:
+      labels:
+        run: java-demo
+    spec:
+      containers:
+        - name: java-demo
+          image: registry.docker-cn.com/yaoailin/java-demo
+          imagePullPolicy: Always
+
